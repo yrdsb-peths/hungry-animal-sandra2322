@@ -1,4 +1,4 @@
-import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
+    import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 
 /**
  * Write a description of class seal here.
@@ -13,6 +13,14 @@ public class Seal extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int speed = 5;
+    public static int size = 60;
+    
+    public Seal(){
+        GreenfootImage image = getImage();
+        image.scale(size, size);
+        setImage(image);
+    }
+    
     public void act()
     {
         if(Greenfoot.isKeyDown("w")){
@@ -27,7 +35,9 @@ public class Seal extends Actor
         if(Greenfoot.isKeyDown("d")){
             moveRight();
         }
+        grow();
     }
+    
     public void moveUp(){
         setLocation(getX(), getY()-speed);
     }
@@ -39,5 +49,10 @@ public class Seal extends Actor
     }
     public void moveLeft(){
         setLocation(getX()-speed, getY());
+    }
+    public void grow(){
+        GreenfootImage image = getImage();
+        image.scale(size, size);
+        setImage(image);
     }
 }

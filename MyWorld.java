@@ -30,5 +30,7 @@ public class MyWorld extends World
         addObject(seal,197,202);
         seal.setLocation(191,213);
         seal.setLocation(69,290);
+        Food food = new Food();
+        addObject(food, 0, 0);
     }
 }
