@@ -13,7 +13,7 @@ public class Seal extends Actor
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     private int speed = 5;
-    public static int size = 60;
+    private static int size = 60;
     
     public Seal(){
         GreenfootImage image = getImage();
@@ -54,5 +54,11 @@ public class Seal extends Actor
         GreenfootImage image = getImage();
         image.scale(size, size);
         setImage(image);
+    }
+    public static void sizeIncrease(int num){
+        size +=num;
+    }
+    public static int getSize(){
+        return size;
     }
 }

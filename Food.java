@@ -16,6 +16,12 @@ public class Food extends Actor
     {
         spawn();
     }
+    public int getNumFood(){
+        return numFood;
+    }
+    public void addFood(int a){
+        numFood+=a;
+    }
     public void moveAround(){
         move(1);
         if(Greenfoot.getRandomNumber(100)<10){
@@ -39,14 +45,10 @@ public class Food extends Actor
             }
         }
     }
-    
-    public void eaten(){
+    public boolean canEat(){
         if(isTouching(Seal.class)){
-            getWorld().removeObject(this);
-            numFood--;
-            if(Seal.size<80){
-                Seal.size+=2;
-            }
+            return true;
         }
+        return false;
     }
 }

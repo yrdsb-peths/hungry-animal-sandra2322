@@ -8,12 +8,20 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Fish extends Food
 {
+    private double nutrients = 2.7;
     public Fish(){
-        super();
+        
     }
     public void act()
     {
         super.moveAround();
-        super.eaten();
+        if(super.canEat()){
+            getWorld().removeObject(this);
+            super.addFood(-1);
+            MyWorld.weight +=nutrients;
+            if(Seal.getSize()<80){
+                Seal.sizeIncrease(5);
+            }
+        }
     }
 }

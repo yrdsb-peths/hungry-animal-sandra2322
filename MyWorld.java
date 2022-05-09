@@ -13,13 +13,13 @@ public class MyWorld extends World
      * Constructor for objects of class myWorld.
      * 
      */
+    public static int weight = 10;
     public MyWorld()
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1); 
         prepare();
     }
-    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -32,5 +32,8 @@ public class MyWorld extends World
         seal.setLocation(69,290);
         Food food = new Food();
         addObject(food, 0, 0);
+    }
+    public void act(){
+        showText("Weight: " + weight, 50, 25);
     }
 }
