@@ -9,8 +9,10 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Food extends Actor
 {
     private static int numFood;
-    public Food(){
+    private Seal seal;
+    public Food(Seal seal){
         numFood++;
+        this.seal = seal;
     }
     public void act()
     {
@@ -39,9 +41,9 @@ public class Food extends Actor
             int x = Greenfoot.getRandomNumber(400);
             int y = Greenfoot.getRandomNumber(300);
             if(Greenfoot.getRandomNumber(2)<1   ){
-                getWorld().addObject(new Fish(), x, y);
+                getWorld().addObject(new Fish(seal), x, y);
             }else{
-                getWorld().addObject(new Turtle(), x, y);
+                getWorld().addObject(new Turtle(seal), x, y);
             }
         }
     }
@@ -50,5 +52,8 @@ public class Food extends Actor
             return true;
         }
         return false;
+    }
+    public Seal getSeal(){
+        return seal;
     }
 }

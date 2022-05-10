@@ -30,7 +30,7 @@ public class MyWorld extends World
         addObject(seal,197,202);
         seal.setLocation(191,213);
         seal.setLocation(69,290);
-        Food food = new Food();
+        Food food = new Food(seal);
         addObject(food, 0, 0);
     }
     public void act(){

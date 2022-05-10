@@ -14,6 +14,7 @@ public class Seal extends Actor
      */
     private int speed = 5;
     private static int size = 60;
+    private int limit = 200;
     
     public Seal(){
         GreenfootImage image = getImage();
@@ -35,9 +36,7 @@ public class Seal extends Actor
         if(Greenfoot.isKeyDown("d")){
             moveRight();
         }
-        grow();
     }
-    
     public void moveUp(){
         setLocation(getX(), getY()-speed);
     }
@@ -50,15 +49,21 @@ public class Seal extends Actor
     public void moveLeft(){
         setLocation(getX()-speed, getY());
     }
-    public void grow(){
-        GreenfootImage image = getImage();
-        image.scale(size, size);
-        setImage(image);
+    public void grow(int number){
+        if(canGrow()){
+            size+=number;
+            GreenfootImage image = new GreenfootImage("seal.png");
+            image.scale(size, size);
+            setImage(image);
+        }
     }
     public static void sizeIncrease(int num){
         size +=num;
     }
     public static int getSize(){
         return size;
+    }
+    public boolean canGrow(){
+        return size<limit;
     }
 }
