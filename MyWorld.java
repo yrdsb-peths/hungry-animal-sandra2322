@@ -34,6 +34,7 @@ public class MyWorld extends World
         addObject(food, 0, 0);
     }
     public void act(){
+        weight = ((int)(weight*10))/10.0;
         showText("Weight: " + weight, 50, 25);
     }
 }
