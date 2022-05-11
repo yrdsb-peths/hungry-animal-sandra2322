@@ -1,5 +1,6 @@
 #Greenfoot project file
 class.Fish.image=fish2.png
+class.MyWorld.image=bluerock.jpg
 class.Seal.image=seal.png
 class.Turtle.image=turtle.png
 dependency1.from=MyWorld
@@ -29,10 +30,10 @@ dependency8.type=UsesDependency
 dependency9.from=Fish
 dependency9.to=MyWorld
 dependency9.type=UsesDependency
-editor.fx.0.height=1056
-editor.fx.0.width=1936
-editor.fx.0.x=-8
-editor.fx.0.y=-8
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=552
+editor.fx.0.y=100
 height=1056
 package.numDependencies=9
 package.numTargets=5

@@ -20,6 +20,7 @@ public class MyWorld extends World
         super(600, 400, 1); 
         prepare();
     }
+    
     /**
      * Prepare the world for the start of the program.
      * That is: create the initial objects and add them to the world.
@@ -33,6 +34,7 @@ public class MyWorld extends World
         Food food = new Food(seal);
         addObject(food, 0, 0);
     }
+
     public void act(){
         weight = ((int)(weight*10))/10.0;
         showText("Weight: " + weight, 50, 25);

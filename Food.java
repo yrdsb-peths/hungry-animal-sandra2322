@@ -37,7 +37,7 @@ public class Food extends Actor
         }
     }
     public void spawn(){
-        if(numFood <10 && Greenfoot.getRandomNumber(100)<10){
+        if(numFood <10 && Greenfoot.getRandomNumber(100)==1){
             int x = Greenfoot.getRandomNumber(400);
             int y = Greenfoot.getRandomNumber(300);
             if(Greenfoot.getRandomNumber(2)<1   ){
