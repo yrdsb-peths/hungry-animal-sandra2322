@@ -27,15 +27,12 @@ public class Shop extends Worlds
         
         DecCd deccd = new DecCd();
         addObject(deccd, 300, 120);
-        deccd.showText();
         
         IncSpeed incspeed = new IncSpeed();
         addObject(incspeed, 300, 220);
-        incspeed.showText();
         
         IncStrength incstr = new IncStrength();
         addObject(incstr, 300, 320);
-        incstr.showText();
     }
     
     public void act(){

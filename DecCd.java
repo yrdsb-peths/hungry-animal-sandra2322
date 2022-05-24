@@ -8,12 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class DecCd extends Upgrades
 {
-    private int[] prices = {100, 300, 600, 1200};
     public DecCd(){
-        super("Decrease Cooldown", 15);
+        super("Decrease Cooldown");
     }
     public void buy(){
         super.buy();
-        
+        Animal.upgradeCd();
     }
 }

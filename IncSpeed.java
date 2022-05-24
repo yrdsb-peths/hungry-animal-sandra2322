@@ -8,14 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class IncSpeed extends Upgrades
 {
-    private int[] prices = {100, 300, 600, 1200};
-    
     public IncSpeed(){
-        super("Increase Speed", 15);
+        super("Increase Speed");
     }
     public void buy(){
         super.buy();
-        
-        
+        Animal.upgradeSpeed();
     }
 }

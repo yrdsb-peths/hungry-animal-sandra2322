@@ -68,15 +68,15 @@ public class Animal extends Actor
             getWorld().addObject(ammo, getWorld().getWidth()/2,getWorld().getHeight());
         }
     }
-    public static void updateCd(){
+    public static void upgradeCd(){
         cdIndex++;
         cdtime = cdtimeUpgrades[cdIndex];
     }
-    public static void updateStrength(){
+    public static void upgradeStrength(){
         strengthIndex++;
         Ammo.strength = strengthUpgrades[strengthIndex];
     }
-    public static void updateSpeed(){
+    public static void upgradeSpeed(){
         speedIndex++;
         Ammo.speed = speedUpgrades[speedIndex];
     }

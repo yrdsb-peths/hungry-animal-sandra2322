@@ -8,12 +8,11 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class IncStrength extends Upgrades
 {
-    private int[] prices = {100, 300, 600, 1200};
     public IncStrength(){
-        super("Increase Strength", 15);
+        super("Increase Strength");
     }
     public void buy(){
         super.buy();
-        
+        Animal.upgradeStrength();
     }
 }
