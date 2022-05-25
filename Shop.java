@@ -9,6 +9,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
 public class Shop extends Worlds
 {
     private MyWorld gameWorld;
+    private Worlds world;
 
     public Shop(MyWorld world)
     {    

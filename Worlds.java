@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Worlds extends World
 {
-    private int money = 10;
+    private static int money;
     private int labelX = 60;
     private int labelY = 40;
     private int level = 1;
@@ -16,7 +16,8 @@ public class Worlds extends World
     public Worlds(int num, int num2, int num3)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
-        super(num, num2, num3); 
+        super(num, num2, num3);
+        money = 10;
     }
     public Worlds(int num, int num2, int num3, boolean bool)
     {    

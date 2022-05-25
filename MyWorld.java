@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class MyWorld extends Worlds
 {
-    private int score;
+    private static int score;
     private Shop shop;
     public MyWorld()
     {    
@@ -63,5 +63,13 @@ public class MyWorld extends Worlds
     public Shop getShop()
     {
         return shop;
+    }
+    public static int getScore(){
+        return score;
+    }
+    public void gameOver()
+    {
+        GameOverWorld world = new GameOverWorld();
+        Greenfoot.setWorld(world);
     }
 }

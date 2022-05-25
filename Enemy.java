@@ -34,6 +34,7 @@ public class Enemy extends Actor
             showText("" + lives, world);
             if(getY() > world.getHeight()){
                 showText(null, world);
+                world.gameOver();
                 world.removeObject(this);
             }else{
                 getShot();   
