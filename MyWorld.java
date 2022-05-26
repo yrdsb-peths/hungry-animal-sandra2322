@@ -15,7 +15,8 @@ public class MyWorld extends Worlds
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(600, 400, 1, false);
         shop = new Shop(this);
-        prepare();
+        score = 0;
+        prepare();        
     }
     public void spawnEnemy()
     {
