@@ -11,14 +11,13 @@ public class Worlds extends World
     private static int money;
     private int labelX = 60;
     private int labelY = 40;
-    private int level;
+    private int level = 1;
     private boolean levelUp = false;
     public Worlds(int num, int num2, int num3)
     {    
         // Create a new world with 600x400 cells with a cell size of 1x1 pixels.
         super(num, num2, num3);
         money = 10;
-        level = 1;
     }
     public Worlds(int num, int num2, int num3, boolean bool)
     {    
